@@ -1,0 +1,37 @@
+env: "WRSN"
+
+env_args:
+    # Nodes specifications
+    "node_capacity" : 10800
+    "node_threshold" : 540
+  # MobileCharger specifications
+    mc_specification:
+        "mc_capacity" : 108000
+        "mc_threshold" : 0
+        "mc_velocity" : 5
+        "mc_pm" : 1
+        "mc_charging_range" : 100
+        "mc_alpha" : 4500
+        "mc_beta" : 30
+        "epsilon" : 0.0000000001
+  # multiple nodes charging model
+    node_phy_spe:
+        "node_com_range": 100
+        "node_prob_gp": 0.8
+      # others
+        "package_size" : 400.0
+      # transmission specifications
+        "er" : 0.0001
+        "et" : 0.00005
+        "efs" : 0.00000001
+        "emp" : 0.0000000000013
+    # data path
+    "scenario": "./environments/data/test.yaml"
+
+    "episode_limit": 240 # in time intervals
+    "action_scale": null
+    "action_bias": null
+    "mode": null # distributed / decentralised
+    "reset_action": True
+    #seed
+    "seed": 0
